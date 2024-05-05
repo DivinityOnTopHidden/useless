@@ -1,0 +1,2 @@
+game:GetService("Players").LocalPlayer.PlayerGui.Home.hud.MenuButton.Position = UDim2.new(0.970000029, -100, 0, 520)
+game:GetService("Players").LocalPlayer.PlayerGui.Home.hud.ClockFrame.Position = UDim2.new(0.970000029, -100, 0, 570)
