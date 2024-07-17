@@ -1,3 +1,5 @@
+local Library = {}
+
 function Library:CreateButton(parent, text, position, size, callback)
     local button = Instance.new("TextButton")
     button.Parent = parent
