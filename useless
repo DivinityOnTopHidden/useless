@@ -1,2 +1,33 @@
-game:GetService("Players").LocalPlayer.PlayerGui.Home.hud.MenuButton.Position = UDim2.new(0.970000029, -100, 0, 520)
-game:GetService("Players").LocalPlayer.PlayerGui.Home.hud.ClockFrame.Position = UDim2.new(0.970000029, -100, 0, 570)
+function Library:CreateButton(parent, text, position, size, callback)
+    local button = Instance.new("TextButton")
+    button.Parent = parent
+    button.Text = text
+    button.Position = position
+    button.Size = size
+    button.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Font = Enum.Font.SourceSans
+    button.TextSize = 24
+
+    if callback then
+        button.MouseButton1Click:Connect(callback)
+    end
+
+    return button
+end
+
+function Library:CreateLabel(parent, text, position, size)
+    local label = Instance.new("TextLabel")
+    label.Parent = parent
+    label.Text = text
+    label.Position = position
+    label.Size = size
+    label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    label.TextColor3 = Color3.fromRGB(0, 0, 0)
+    label.Font = Enum.Font.SourceSans
+    label.TextSize = 24
+
+    return label
+end
+
+return Library
